@@ -49,8 +49,14 @@ button {
 
 .no-btn {
     position: absolute;
+    border: 1px solid salmon !important;
+    color: salmon !important;
     right: 42%;
     transform: translateX(50%);
+}
+.no-btn:hover {
+    background-color: #fff;
+    color: salmon !important;
 }
 
 button:hover {
