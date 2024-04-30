@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do you want flower?</title>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h2 class="question">haloo, semoga kita bisa temenan terus yaa, <br> aku punya hadiah buat kamuu, kamu mau gaa??
+        </h2>
+
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDE0ejRqMjlpZ3U0OWN5c2pvYTY3NzZveXh4NDE2dWgxbWRtcXppMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/yNvmkSbnamOXEfnYxY/giphy.gif"
+            alt="gif" class="gif">
+
+        <div class="btn-group">
+            <button class="yes-btn">mau</button>
+            <button class="no-btn">gamau</button>
+        </div>
+    </div>
+
+    <script>
+        let question = document.querySelector('.question')
+        let gif = document.querySelector('.gif')
+        const yesBtn = document.querySelector('.yes-btn')
+        const noBtn = document.querySelector('.no-btn')
+
+        let clickCount = 0
+
+        function yesBtnHandler() {
+            clickCount++
+            if (clickCount === 1) {
+                question.innerHTML = 'beneraaan mauu? ga terpaksaa kann🥺'
+                gif.src = 'https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif'
+            } else if (clickCount === 2) {
+                question.innerHTML = 'semogaaa kamuu suka yaa❤️'
+                gif.src =
+                    'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGk3enBkbDBtcHFyZGpscTRuMHphYWgybW04Ynd0cnl1MTc2dmd4MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/FTGah7Mx3ss04PcasF/giphy.gif'
+            } else if (clickCount === 3) {
+                window.location.href = 'https://athazahrane.github.io/second-flower.github.io/'
+            }
+        }
+
+        function noBtnHandler() {
+            const btnNoReact = noBtn.getBoundingClientRect()
+            const maxX = window.innerWidth - btnNoReact.width
+            const maxY = window.innerHeight - btnNoReact.height
+
+            const randomX = Math.floor(Math.random() * maxX)
+            const randomY = Math.floor(Math.random() * maxY)
+
+            noBtn.style.top = randomY + 'px'
+            noBtn.style.left = randomX + 'px'
+        }
+
+        yesBtn.addEventListener('click', yesBtnHandler)
+        noBtn.addEventListener('mouseover', noBtnHandler)
+    </script>
+</body>
+
+</html>

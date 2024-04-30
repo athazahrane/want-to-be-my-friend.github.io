@@ -1,0 +1,94 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 0 50px;
+}
+
+.question {
+    text-align: center;
+}
+
+.gif {
+    max-width: 200px;
+}
+
+.btn-group {
+    width: 30%;
+    display: flex;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border: 1px solid salmon;
+    border-radius: 1000px;
+    background-color: #fff;
+    color: salmon;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.yes-btn {
+    position: absolute;
+    left: 42%;
+    transform: translateX(-50%);
+}
+
+.no-btn {
+    position: absolute;
+    right: 42%;
+    transform: translateX(50%);
+}
+
+button:hover {
+    background-color: salmon;
+    color: #fff;
+}
+
+@media screen and (max-width: 786px) {
+    html {
+        font-size: 75%;
+    }
+
+    .yes-btn {
+        position: absolute;
+        left: 35%;
+        transform: translateX(-50%);
+    }
+
+    .no-btn {
+        position: absolute;
+        right: 35%;
+        transform: translateX(50%);
+    }
+}
+@media screen and (max-width: 500px) {
+    button {
+        width: 130px;
+    }
+
+    .yes-btn {
+        position: absolute;
+        left: 30%;
+        transform: translateX(-50%);
+    }
+
+    .no-btn {
+        position: absolute;
+        right: 30%;
+        transform: translateX(50%);
+    }
+}
